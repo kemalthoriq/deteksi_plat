@@ -1,0 +1,19 @@
+<!-- vehicle_app/templates/upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unggah Gambar Plat Nomor</title>
+</head>
+<body>
+    <h1>Unggah Gambar Plat Nomor</h1>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" required>
+        <button type="submit">Unggah</button>
+    </form>
+</body>
+</html>

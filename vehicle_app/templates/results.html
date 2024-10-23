@@ -1,0 +1,12 @@
+<h2>Plat Nomor Terdeteksi:</h2>
+<p>{{ detected_plate }}</p>
+
+<h3>Gambar Asli:</h3>
+<img src="{{ image }}" alt="Gambar Asli" width="400">
+
+{% if processed_image %}
+<h3>Gambar dengan Bounding Box:</h3>
+<img src="{{ processed_image }}" alt="Gambar dengan Bounding Box" width="400">
+{% else %}
+<p>Gambar dengan bounding box tidak tersedia.</p>
+{% endif %}
